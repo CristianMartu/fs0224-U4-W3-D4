@@ -1,10 +1,12 @@
 package cristianmartucci.dao;
 
+import cristianmartucci.entities.Concert;
 import cristianmartucci.entities.Event;
 import cristianmartucci.exceptions.EventException;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 
+import java.util.List;
 import java.util.UUID;
 
 public class EventDAO {
@@ -33,5 +35,9 @@ public class EventDAO {
         transaction.begin();
         em.remove(event);
         transaction.commit();
+    }
+
+    public List<Concert> getConcertInStreaming(Boolean value) {
+
     }
 }
