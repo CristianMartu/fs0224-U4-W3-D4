@@ -47,7 +47,13 @@ public class Application {
 
         Person getPersonFromDb = personDao.getById("6bd47231-3464-46fd-ac37-b3482a89722b");
         RunningRace race = new RunningRace("Run 5.30", LocalDate.parse("2024-06-06"), "Evento pubblico", EventType.PUBBLICO, 3000, locationFromDb, getPersonFromDb);
-        ed.save(race);
+//        ed.save(race);
+
+        ed.getConcertInStreaming(false).forEach(System.out::println);
+        ed.getConcertType(ConcertType.ROCK).forEach(System.out::println);
+
+        ed.getWinnerHomeMatch().forEach(System.out::println);
+//        ed.getWinnerVisitingMatch().forEach(System.out::println);
 //
 
 //        try {
