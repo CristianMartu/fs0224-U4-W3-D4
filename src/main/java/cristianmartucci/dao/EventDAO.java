@@ -53,12 +53,12 @@ public class EventDAO {
     }
 
     public List<FootballMatch> getWinnerHomeMatch() {
-        TypedQuery<FootballMatch> query = em.createQuery("getWinnerHomeMatch", FootballMatch.class);
+        TypedQuery<FootballMatch> query = em.createNamedQuery("getWinnerHomeMatch", FootballMatch.class);
         return query.getResultList();
     }
 
     public List<FootballMatch> getWinnerVisitingMatch() {
-        TypedQuery<FootballMatch> query = em.createQuery("getWinnerVisitingMatch", FootballMatch.class);
+        TypedQuery<FootballMatch> query = em.createNamedQuery("getWinnerVisitingMatch", FootballMatch.class);
         return query.getResultList();
     }
 }

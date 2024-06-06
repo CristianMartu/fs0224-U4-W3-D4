@@ -51,38 +51,8 @@ public class Application {
 
         ed.getConcertInStreaming(false).forEach(System.out::println);
         ed.getConcertType(ConcertType.ROCK).forEach(System.out::println);
-
         ed.getWinnerHomeMatch().forEach(System.out::println);
-//        ed.getWinnerVisitingMatch().forEach(System.out::println);
-//
-
-//        try {
-//            Location getLocation = ld.getById("a642a338-f330-4aaa-96c5-7ec08f562f7d");
-//            System.out.println(getLocation);
-//        } catch (EventException error) {
-//            System.out.println(error.getMessage());
-//        }
-//
-//        try {
-//            Event getEvent = ed.getById("ac6c1338-9321-4b30-b4ad-18a54429f8b1");
-//            System.out.println(getEvent);
-//        } catch (EventException error) {
-//            System.out.println(error.getMessage());
-//        }
-//
-//        try {
-//            Person getPerson = personDao.getById("8944caba-e2d8-4a6e-b14c-300069d07cba");
-//            System.out.println(getPerson);
-//        } catch (EventException error) {
-//            System.out.println(error.getMessage());
-//        }
-
-//        try {
-//            Participation getParticipation = pd.getById("faf55416-d5c4-4211-b73c-12459aaa62d2");
-//            System.out.println(getParticipation);
-//        } catch (EventException error) {
-//            System.out.println(error.getMessage());
-//        }
+        ed.getWinnerVisitingMatch().forEach(System.out::println);
 
 
         em.close();
